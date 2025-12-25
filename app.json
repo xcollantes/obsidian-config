@@ -1,0 +1,10 @@
+{
+  "showUnsupportedFiles": true,
+  "alwaysUpdateLinks": true,
+  "useMarkdownLinks": true,
+  "showLineNumber": false,
+  "defaultViewMode": "source",
+  "newFileLocation": "current",
+  "attachmentFolderPath": "./",
+  "spellcheck": true
+}
