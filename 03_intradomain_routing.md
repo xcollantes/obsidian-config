@@ -73,5 +73,9 @@ Updates are exchanged between neighbors periodically using RIP response message.
 
 Updates are sent every 180 seconds using UDP on port 520 on the network layer IP protocol.
 
+## Open Shortest Path First
+
+This is a routing protocol that uses a link-state routing algorithm to find the best path between the source and the destination router.
+
 
 
