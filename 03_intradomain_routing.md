@@ -19,3 +19,9 @@ We start with the initialization step, where we set all the currently known leas
 In the first iteration, we look among the nodes that are not yet in N’, and we select the node with the least cost from the previous iteration. In this case, this is node x. Then we update D for all the immediate neighbors of x, which in this case are nodes v, w, and y. For example, we update D(w) as the minimum between: the cost we had from the previous iteration which is 5, and the cost from u to x (1) plus cost from x to w (3). The minimum between the two is 4. We update the second row in our table. 
 
 We continue in a similar manner for the rest of the nodes in the table. The algorithm exits in the 5th iteration.
+
+### Complexity
+
+```latex
+n(n+1) / 2
+```
