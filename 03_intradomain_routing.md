@@ -58,3 +58,8 @@ Understanding why it is 5 in step 1 is one of the keys to understanding the coun
 All of the nodes have their own table. So, Node Y detected the change, but Node Z didn't. Node Y sees that Node Z has a path to x with a cost of 5. So, it may be easier to interpret the equation as (cost of y->x) = 1 + 5 = (cost of link y->z) + (cost of z->x, which is stored in Node Z's DV).
 
 Pause to make sure you see where the count-to-infinity problem shows up. Since Node Y advertises a cost of 6, Node Z updates and its cost to 7, and the process repeats.
+
+## Routing Information Protocol
+
+Assumes link cost as 1 as part of BSD Linux.
+
