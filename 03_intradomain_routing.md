@@ -30,6 +30,8 @@ $$
 
 ## Distance vector (Belford-Ford)
 
+The DV algorithm is Distributed, Async, and Iterative.
+
 $$
 Dx(y) = minv{c(x,v) + Dv(y)}
 $$
@@ -37,7 +39,7 @@ $$
 
 ## Failures in Distance Vector
 
-The count to infinity problem:
+The count to infinity problem can be caused by Routing Loops.
 
 ![](03_intradomain_routing-1789337418353.jpeg)
 
