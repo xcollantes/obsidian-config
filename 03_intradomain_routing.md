@@ -70,3 +70,8 @@ The metrics for the path comes from
 - load-balanced path
 
 Updates are exchanged between neighbors periodically using RIP response message. As opposed to Distance Vectors. Messages are called RIP advertisements which contain the sender's distance to the destination subnets.
+
+Updates are sent every 180 seconds using UDP on port 520 on the network layer IP protocol.
+
+
+
