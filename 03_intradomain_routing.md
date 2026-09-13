@@ -4,11 +4,13 @@
 
 **Routing** is how routers work together to find the good routes to move data.
 
-**Intraroutinq** involves input and output for a single router.
+**Intrarouting** involves input and output for a single router.
 
 **Interouting** involves multiple routers to move data.
 
 Time delay to traverse the link is what the hops represent in the graph.
+
+Each router along a packet's path independently decides that packet's next hop.
 
 ## Link state routing
 
