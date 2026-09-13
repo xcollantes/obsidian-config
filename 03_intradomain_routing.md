@@ -63,3 +63,10 @@ Pause to make sure you see where the count-to-infinity problem shows up. Since N
 
 Assumes link cost as 1 as part of BSD Linux.
 
+The metrics for the path comes from
+
+- shortest distance
+- lowest cost
+- load-balanced path
+
+Updates are exchanged between neighbors periodically using RIP response message. As opposed to Distance Vectors. Messages are called RIP advertisements which contain the sender's distance to the destination subnets.
