@@ -12,11 +12,15 @@ Time delay to traverse the link is what the hops represent in the graph.
 
 Each router along a packet's path independently decides that packet's next hop.
 
+The Poison Reverse Technique does not solve all count-to-inifinity problems.
+
 ## Link state routing
 
 **Method**: Each node discovers its direct neighbors and measures link costs using hello packets.
 
 **Updates**: Nodes create Link-State Advertisements (LSAs) and **flood** them to every router across the entire network.
+
+The result is a "global" and complete view of the topology but not a centralized one.
 
 ![](03_intradomain_routing-1789333820636.jpeg)
 
@@ -41,6 +45,8 @@ The DV algorithm is Distributed, Async, and Iterative.
 **Method**: Each node shares its own calculated distance vector (costs to destinations) only with its immediate neighbors.
 
 **Updates**: Routers pass their entire routing tables or summaries periodically.
+
+In distance vector routing, an increase in a link cost can take many more iterations to propagate through the network than a decrease does.
 
 $$
 Dx(y) = minv{c(x,v) + Dv(y)}
@@ -79,7 +85,7 @@ The metrics for the path comes from
 - lowest cost
 - load-balanced path
 
-Considered an intradomain algorithm and type of link-state.
+Considered an intradomain algorithm and type of DV.
 
 Updates are exchanged between neighbors periodically using RIP response message. As opposed to Distance Vectors. Messages are called RIP advertisements which contain the sender's distance to the destination subnets.
 
@@ -98,4 +104,8 @@ Global routing algorithm which is also referred to as the link-state algo.
 Routers will use intradomain routing to find best path within the network. If the destination is outside the network, the data will be routed out.
 
 Hot potato is a way to choose the best egress point based on intradomain path cost which is Intradomain Gateway Protocol Cost.
+
+Because hot potato routing is an internal decision, a change to an IGP link weight cannot affect the routes advertised to neighboring networks.
+
+When BGP cannot otherwise distinguish between two routes to an external destination, a router selects the egress point with the lowest IGP path cost.
 
