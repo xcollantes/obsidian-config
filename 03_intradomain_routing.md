@@ -12,6 +12,10 @@ Time delay to traverse the link is what the hops represent in the graph.
 
 ## Link state routing
 
+**Method**: Each node discovers its direct neighbors and measures link costs using hello packets.
+
+**Updates**: Nodes create Link-State Advertisements (LSAs) and **flood** them to every router across the entire network.
+
 ![](03_intradomain_routing-1789333820636.jpeg)
 
 We start with the initialization step, where we set all the currently known least-cost paths from u to it’s directly attached neighbors v, x and w. For the rest of the nodes in the network we set the cost to infinity, because they are not immediate neighbors to source node u. We also initialize the set N' to include only the source node u. The first row in our table represents the initialization step.  
@@ -31,6 +35,10 @@ $$
 ## Distance vector (Belford-Ford)
 
 The DV algorithm is Distributed, Async, and Iterative.
+
+**Method**: Each node shares its own calculated distance vector (costs to destinations) only with its immediate neighbors.
+
+**Updates**: Routers pass their entire routing tables or summaries periodically.
 
 $$
 Dx(y) = minv{c(x,v) + Dv(y)}
@@ -88,6 +96,4 @@ Global routing algorithm which is also referred to as the link-state algo.
 Routers will use intradomain routing to find best path within the network. If the destination is outside the network, the data will be routed out.
 
 Hot potato is a way to choose the best egress point based on intradomain path cost which is Intradomain Gateway Protocol Cost.
-
-
 
