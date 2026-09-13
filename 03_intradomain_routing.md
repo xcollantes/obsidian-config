@@ -34,4 +34,4 @@ $$
 $$
 Dx(y) = minv{c(x,v) + Dv(y)}
 $$
-
+![](03_intradomain_routing-1789336071720.jpeg)
