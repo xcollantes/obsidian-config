@@ -83,3 +83,11 @@ This is a routing protocol that uses a link-state routing algorithm to find the 
 
 Global routing algorithm which is also referred to as the link-state algo.
 
+## Hot Potato Routing
+
+Routers will use intradomain routing to find best path within the network. If the destination is outside the network, the data will be routed out.
+
+Hot potato is a way to choose the best egress point based on intradomain path cost which is Intradomain Gateway Protocol Cost.
+
+
+
