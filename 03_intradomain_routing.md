@@ -20,12 +20,18 @@ In the first iteration, we look among the nodes that are not yet in N’, and we
 
 We continue in a similar manner for the rest of the nodes in the table. The algorithm exits in the 5th iteration.
 
+![](03_intradomain_routing-1789335588136.jpeg)
+
 ### Complexity
 
-```latex
+$$
 n(n+1) / 2
-```
+$$
 
 
-## Dijiksta 
+## Distance vector (Belford-Ford)
+
+$$
+Dx(y) = minv{c(x,v) + Dv(y)}
+$$
 
