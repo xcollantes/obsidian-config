@@ -69,6 +69,8 @@ The metrics for the path comes from
 - lowest cost
 - load-balanced path
 
+Considered an intradomain algorithm and type of link-state.
+
 Updates are exchanged between neighbors periodically using RIP response message. As opposed to Distance Vectors. Messages are called RIP advertisements which contain the sender's distance to the destination subnets.
 
 Updates are sent every 180 seconds using UDP on port 520 on the network layer IP protocol.
@@ -77,5 +79,7 @@ Updates are sent every 180 seconds using UDP on port 520 on the network layer IP
 
 This is a routing protocol that uses a link-state routing algorithm to find the best path between the source and the destination router.
 
+## Dijkstra’s Algorithm
 
+Global routing algorithm which is also referred to as the link-state algo.
 
