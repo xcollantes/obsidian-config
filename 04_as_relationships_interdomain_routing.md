@@ -30,3 +30,8 @@ Assume that AS X learns of a route to the same destination a via AS Y and AS Z.
 The MED (Multi-Exit Discriminator) value is used by ASes connected by multiple links to designate with of those links are preferred for inbound traffic.
 
 Assume that AS X prefers routes advertised to AS Y to go through R1 as opposed to R2. For AS Y to be influenced to choose R1 to forward traffic to AS X, R1 must have a lower MED value, assuming that all other attributes are equal.
+
+While BGP (iBGP and eBGP) is concerned with routing traffic _between_ different ASes, an IGP is specifically designed to map the internal topology of a single AS and share internal subnets.
+
+
+
