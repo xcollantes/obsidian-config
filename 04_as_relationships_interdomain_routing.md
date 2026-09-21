@@ -17,3 +17,5 @@ Both flavors (iBGP and eBGP) take care of disseminating *external* routes. An 
 
 IGP-like protocols are used to establish paths between the internal routers of an AS based on specific costs within the AS. In contrast, iBGP is only used to disseminate external routes within the AS.
 
+![](04_as_relationships_interdomain_routing-1789970760423.jpeg)
+
